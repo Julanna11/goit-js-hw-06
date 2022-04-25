@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+ 
+const elements = images.map(option => {
+const imageInsert = `<li><img src="${option.url}" alt="${option.alt}"
+width = 200 height = 150></li>`;
+     return imageInsert;
+});
+const imageInsert = document.querySelector('ul');
+imageInsert.insertAdjacentHTML('beforeend', elements.join(' '));
+imageInsert.setAttribute("style", "list-style:none; display: flex; justify-content:space-between");
